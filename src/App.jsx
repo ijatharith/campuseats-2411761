@@ -22,27 +22,38 @@ function App() {
   // ---------- Fetch vendors ----------
   useEffect(() => {
     const controller = new AbortController()
+
+    // Stretch task: wait 600 ms before fetching so the loading state is visible
+    const timer = setTimeout(() => {
+      fetch('/api/vendors.json', { signal: controller.signal })
+        .then((res) => {
+          if (!res.ok) throw new Error(`HTTP ${res.status}`)
+          return res.json()
+        })
+        .then((data) => {
+          setVendors(data)
+          if (data.length > 0) setSelectedId(data[0].id) // select first vendor
+        })
+        .catch((err) => {
+          if (err.name !== 'AbortError') setError(err.message)
+        })
+        .finally(() => {
+          if (!controller.signal.aborted) setLoading(false)
+        })
+    }, 600)
+
+    return () => {
+      clearTimeout(timer) // cleanup: cancel the delay...
+      controller.abort() // ...and any fetch already in flight
+    }
+  }, [reloadKey]) // Try again changes reloadKey, so this runs again
+
+  // Reset the status here, in the click handler, rather than inside the effect
+  function handleRetry() {
     setLoading(true)
     setError(null)
-
-    fetch('/api/vendors.json', { signal: controller.signal })
-      .then((res) => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`)
-        return res.json()
-      })
-      .then((data) => {
-        setVendors(data)
-        if (data.length > 0) setSelectedId(data[0].id) // select first vendor
-      })
-      .catch((err) => {
-        if (err.name !== 'AbortError') setError(err.message)
-      })
-      .finally(() => {
-        if (!controller.signal.aborted) setLoading(false)
-      })
-
-    return () => controller.abort() // cleanup
-  }, [reloadKey]) // Try again changes reloadKey, so this runs again
+    setReloadKey((k) => k + 1) // changing reloadKey runs the fetch effect again
+  }
 
   const selectedVendor = vendors.find((v) => v.id === selectedId)
 
@@ -111,7 +122,7 @@ function App() {
   } else if (loading) {
     content = <Loading />
   } else if (error) {
-    content = <ErrorMessage message={error} onRetry={() => setReloadKey((k) => k + 1)} />
+    content = <ErrorMessage message={error} onRetry={handleRetry} />
   } else {
     content = (
       <>
@@ -128,7 +139,10 @@ function App() {
             ))}
           </div>
         </section>
-        {selectedVendor && <MenuList vendor={selectedVendor} onAdd={handleAddToCart} />}
+        {selectedVendor && (
+          // key resets the category filter to "All" when another vendor is picked
+          <MenuList key={selectedVendor.id} vendor={selectedVendor} onAdd={handleAddToCart} />
+        )}
       </>
     )
   }
