@@ -1,0 +1,57 @@
+[
+  {
+    "id": "2411761-palas-coffee",
+    "name": "Palas Coffee",
+    "location": "Mahallah Asma, Block C",
+    "openHours": "9:00 am - 11:00 pm",
+    "isOpen": true,
+    "menu": [
+      { "id": "2411761-pc-1", "name": "Iced Spanish Latte", "description": "Espresso with chilled milk and condensed milk, served over ice", "price": 9.5, "category": "Coffee", "available": true, "popular": true },
+      { "id": "2411761-pc-2", "name": "Americano", "description": "Double shot of espresso topped with hot water", "price": 6.5, "category": "Coffee", "available": true, "popular": false },
+      { "id": "2411761-pc-3", "name": "Caramel Macchiato", "description": "Vanilla milk marked with espresso and drizzled with caramel", "price": 10.0, "category": "Coffee", "available": true, "popular": true },
+      { "id": "2411761-pc-4", "name": "Grilled Chicken Chop", "description": "Grilled chicken thigh with mushroom sauce, fries and coleslaw", "price": 16.9, "category": "Western", "available": true, "popular": true },
+      { "id": "2411761-pc-5", "name": "Fish and Chips", "description": "Battered dory fillet with fries and tartar sauce", "price": 15.9, "category": "Western", "available": true, "popular": false },
+      { "id": "2411761-pc-6", "name": "Beef Lasagna", "description": "Layers of pasta, beef ragu, bechamel and melted cheese, baked in the oven", "price": 17.9, "category": "Italian", "available": true, "popular": true },
+      { "id": "2411761-pc-7", "name": "Fettuccine Alfredo", "description": "Fettuccine in a creamy parmesan sauce with grilled chicken and mushrooms", "price": 15.9, "category": "Italian", "available": true, "popular": false },
+      { "id": "2411761-pc-8", "name": "Margherita Pizza", "description": "Tomato sauce, mozzarella and fresh basil on a thin crust", "price": 18.9, "category": "Pizza", "available": true, "popular": false },
+      { "id": "2411761-pc-9", "name": "Beef Pepperoni Pizza", "description": "Beef pepperoni, mozzarella and tomato sauce on a thin crust", "price": 22.9, "category": "Pizza", "available": true, "popular": true },
+      { "id": "2411761-pc-10", "name": "Tiramisu", "description": "Espresso-soaked ladyfingers layered with mascarpone cream", "price": 9.9, "category": "Desserts", "available": true, "popular": false }
+    ]
+  },
+  {
+    "id": "2417185-jackals-corner",
+    "name": "Jackal's Corner",
+    "location": "Nilai, Negeri Sembilan",
+    "openHours": "8:00 am - 10:00 pm",
+    "isOpen": true,
+    "menu": [
+      { "id": "2417185-jc-1", "name": "Jackal's Signature Chicken Chop", "description": "Grilled chicken chop served with black pepper sauce, fries and coleslaw", "price": 15.9, "category": "Western", "available": true, "popular": true },
+      { "id": "2417185-jc-2", "name": "Classic Beef Burger", "description": "Juicy beef patty with cheese, lettuce, tomato and special sauce", "price": 13.9, "category": "Western", "available": true, "popular": true },
+      { "id": "2417185-jc-3", "name": "Creamy Chicken Carbonara", "description": "Spaghetti served with creamy carbonara sauce and grilled chicken", "price": 14.9, "category": "Pasta", "available": true, "popular": true },
+      { "id": "2417185-jc-4", "name": "Spaghetti Aglio Olio", "description": "Spaghetti tossed with garlic, olive oil, chili flakes and mushrooms", "price": 12.9, "category": "Pasta", "available": true, "popular": false },
+      { "id": "2417185-jc-5", "name": "Jackal's Special Fried Rice", "description": "Signature fried rice served with fried chicken, egg and sambal", "price": 9.5, "category": "Rice", "available": true, "popular": true },
+      { "id": "2417185-jc-6", "name": "Buttermilk Chicken Rice", "description": "Crispy chicken coated in creamy buttermilk sauce served with rice", "price": 11.9, "category": "Rice", "available": true, "popular": false },
+      { "id": "2417185-jc-7", "name": "Iced Cafe Latte", "description": "Fresh espresso mixed with chilled milk and served over ice", "price": 8.0, "category": "Drinks", "available": true, "popular": true },
+      { "id": "2417185-jc-8", "name": "Chocolate Frappe", "description": "Blended chocolate drink topped with whipped cream", "price": 10.5, "category": "Drinks", "available": true, "popular": false },
+      { "id": "2417185-jc-9", "name": "Iced Lemon Tea", "description": "Refreshing black tea with fresh lemon and ice", "price": 5.0, "category": "Drinks", "available": true, "popular": false },
+      { "id": "2417185-jc-10", "name": "Chocolate Brownie", "description": "Rich chocolate brownie served with vanilla ice cream", "price": 7.5, "category": "Desserts", "available": true, "popular": true }
+    ]
+  },
+  {
+    "id": "2415143-republic-ayam-gepuk",
+    "name": "Republic of Ayam Gepuk",
+    "location": "Mahallah Salahuddin, Ground Floor",
+    "openHours": "10:30 am - 10:00 pm",
+    "isOpen": true,
+    "menu": [
+      { "id": "2415143-m1", "name": "Set A - Ayam Gepuk", "description": "White rice with fried chicken serve with sambal gepuk, cashew sambal and raw cabbage", "price": 8.0, "category": "Food", "available": true },
+      { "id": "2415143-m2", "name": "Set B - Ayam Gepuk", "description": "White rice with fried chicken serve with sambal gepuk, cashew sambal, fried cabbage and tempe", "price": 12.0, "category": "Food", "available": true },
+      { "id": "2415143-m3", "name": "Teh O ais", "description": "Tea with ice", "price": 1.5, "category": "Drinks", "available": true },
+      { "id": "2415143-m4", "name": "Teh O Ais Limau", "description": "Tea with ice and lime", "price": 2.0, "category": "Drinks", "available": true },
+      { "id": "2415143-m5", "name": "Sirap ais", "description": "Rose-flavored water and ice", "price": 1.5, "category": "Drinks", "available": true },
+      { "id": "2415143-m6", "name": "Bayam goreng", "description": "Fried spinach", "price": 3.0, "category": "Add On", "available": true },
+      { "id": "2415143-m7", "name": "Kobis goreng", "description": "A crispy, sweet and savory stir fried cabbage", "price": 3.0, "category": "Add On", "available": true },
+      { "id": "2415143-m8", "name": "Ayam", "description": "A crispy, freshly fried chicken", "price": 6.0, "category": "Add On", "available": true }
+    ]
+  }
+]
