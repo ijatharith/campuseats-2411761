@@ -18,5 +18,5 @@ Add a new section every week, before you tag. Did not use AI? Write "None" under
 ## Week 3
 - Tool(s): Claude Code (Claude)
 - What I asked for: built my personal feature (filter by category), added the 600 ms loading delay from the stretch task, and fixed a lint error by moving the loading/error reset out of the effect into the Try again handler.
-- What I kept, changed or rejected, and why:
-- One thing the AI got wrong and how I fixed it:
+- What I kept, changed or rejected, and why: 
+- One thing the AI got wrong and how I fixed it: When I said the "Loading menus…" test failed, the AI said my code was fine and told me to slow the network in DevTools. It did not point to the 600 ms delay in the lab sheet's stretch task. I gave it the lab sheet, and the delay it then added is what made the loading message visible.
