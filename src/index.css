@@ -154,3 +154,37 @@ a.card:hover { border-color: var(--green-light); }
   .nav { flex-wrap: wrap; gap: 0.4rem 1rem; font-size: 0.95rem; }
   .container { padding: 1rem; }
 }
+
+body { margin: 0; font-family: system-ui, sans-serif; background: #f5f6f8; color: #1f2933; }
+.header { display: flex; justify-content: space-between; align-items: center;
+  background: #00695c; color: #fff; padding: 0.75rem 1.5rem; }
+.logo { margin: 0; font-size: 1.3rem; }
+.nav { display: flex; gap: 1rem; }
+.badge { background: #fff; color: #00695c; border-radius: 999px; padding: 0 0.45rem;
+  font-size: 0.8rem; font-weight: 700; }
+.container { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
+.footer { text-align: center; color: #6b7280; font-size: 0.85rem; padding: 2rem 0; }
+.card { background: #fff; border-radius: 10px; padding: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.muted { color: #6b7280; font-size: 0.9rem; margin: 0.2rem 0; }
+.btn { background: #00695c; color: #fff; border: 0; border-radius: 8px; padding: 0.55rem 1rem;
+  font: inherit; cursor: pointer; margin-top: 0.75rem; }
+.btn:disabled { background: #9ca3af; cursor: not-allowed; }
+.vendor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+.vendor-card { text-align: left; border: 2px solid transparent; cursor: pointer; font: inherit; }
+.vendor-card.selected { border-color: #00695c; }
+.vendor-card h3 { margin: 0 0 0.3rem; }
+.status { display: inline-block; margin-top: 0.5rem; font-size: 0.8rem; font-weight: 600;
+  padding: 0.1rem 0.5rem; border-radius: 999px; }
+.status.open { background: #d1fae5; color: #065f46; }
+.status.closed { background: #fee2e2; color: #991b1b; }
+.menu-list { list-style: none; padding: 0; display: grid; gap: 0.75rem; }
+.menu-item { display: grid; grid-template-columns: 1fr auto auto; gap: 1rem; align-items: center; }
+.menu-item .btn { margin-top: 0; }
+.tag { background: #fef3c7; color: #92400e; font-size: 0.75rem; padding: 0.1rem 0.4rem;
+  border-radius: 6px; margin-left: 0.3rem; }
+
+/* Week 3 personal feature: filter by category */
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; }
+.chip { padding: 0.3rem 0.8rem; border: 1px solid #c5cbd3; border-radius: 999px;
+  background: #fff; color: inherit; font: inherit; font-size: 0.9rem; cursor: pointer; }
+.chip.active { background: #00695c; border-color: #00695c; color: #fff; }
