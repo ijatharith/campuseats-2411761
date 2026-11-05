@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import MenuItem from './MenuItem.jsx'
 
-function MenuList({ vendor, onAdd }) {
-  const [category, setCategory] = useState('All')
+  const { addToCart } = useCart()
 
   // Derived from the menu: unique categories in the order they first appear
   const categories = ['All', ...new Set(vendor.menu.map((item) => item.category))]
@@ -26,7 +25,7 @@ function MenuList({ vendor, onAdd }) {
       </div>
       <ul className="menu-list">
         {visible.map((item) => (
-          <MenuItem key={item.id} item={item} canOrder={vendor.isOpen} onAdd={onAdd} />
+          <MenuItem key={item.id} item={item} canOrder={vendor.isOpen} onAdd={addToCart} />
         ))}
       </ul>
     </section>

@@ -20,3 +20,9 @@ Add a new section every week, before you tag. Did not use AI? Write "None" under
 - What I asked for: built my personal feature (filter by category), added the 600 ms loading delay from the stretch task, and fixed a lint error by moving the loading/error reset out of the effect into the Try again handler.
 - What I kept, changed or rejected, and why: 
 - One thing the AI got wrong and how I fixed it: When I said the "Loading menus…" test failed, the AI said my code was fine and told me to slow the network in DevTools. It did not point to the 600 ms delay in the lab sheet's stretch task. I gave it the lab sheet, and the delay it then added is what made the loading message visible.
+
+## Week 4
+- Tool(s): Claude Code (Claude)
+- What I asked for: My app stopped working after I put the Part A code-along into my CampusEats App.jsx, so I asked why. Then I gave it the Lab 4 sheet, asked what I still had to do, and asked it to build the Part B work: the useLocalStorage (with try/catch), useVendors and useCart hooks, the CartContext and CartProvider, a Layout with Outlet, the five pages (Home, Vendor, Cart, Orders, NotFound), NavLink in the header, VendorCard as a Link, useNavigate after checkout, and my Week 4 feature step (keeping the category in the URL with useSearchParams).
+- What I kept, changed or rejected, and why: 
+- One thing the AI got wrong and how I fixed it: At first it told me to replace my CampusEats App with the code-along demo routes. But the code-along was supposed to be a separate project (week4-codealong), so that would have thrown away my Week 3 app. Once I showed it the lab sheet, it kept my Week 3 logic and moved it into hooks and the cart context instead.
