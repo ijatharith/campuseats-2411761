@@ -1,7 +1,18 @@
-import { useState } from 'react'
+import { useSearchParams } from 'react-router'
 import MenuItem from './MenuItem.jsx'
+import { useCart } from '../hooks/useCart.js'
 
+function MenuList({ vendor }) {
   const { addToCart } = useCart()
+
+  // Week 4 feature: the category lives in the URL (/vendor/:id?cat=Rice),
+  // so each filtered view has its own shareable link and survives Back/refresh.
+  const [searchParams, setSearchParams] = useSearchParams()
+  const category = searchParams.get('cat') ?? 'All'
+
+  function setCategory(c) {
+    setSearchParams(c === 'All' ? {} : { cat: c })
+  }
 
   // Derived from the menu: unique categories in the order they first appear
   const categories = ['All', ...new Set(vendor.menu.map((item) => item.category))]
